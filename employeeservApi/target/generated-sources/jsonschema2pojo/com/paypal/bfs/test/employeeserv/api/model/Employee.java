@@ -3,6 +3,9 @@ package com.paypal.bfs.test.employeeserv.api.model;
 
 import java.util.HashMap;
 import java.util.Map;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -22,7 +25,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
     "id",
     "first_name",
-    "last_name"
+    "last_name",
+    "date_of_birth",
+    "address"
 })
 public class Employee {
 
@@ -40,6 +45,8 @@ public class Employee {
      */
     @JsonProperty("first_name")
     @JsonPropertyDescription("first name")
+    @Size(min = 1, max = 255)
+    @NotNull
     private String firstName;
     /**
      * last name
@@ -48,8 +55,29 @@ public class Employee {
      */
     @JsonProperty("last_name")
     @JsonPropertyDescription("last name")
+    @Size(min = 1, max = 255)
+    @NotNull
     private String lastName;
+    /**
+     * Date of birth
+     * 
+     */
+    @JsonProperty("date_of_birth")
+    @JsonPropertyDescription("Date of birth")
+    @Size(min = 1, max = 255)
+    private String dateOfBirth;
+    /**
+     * Employee resource
+     * <p>
+     * Employee resource object
+     * 
+     */
+    @JsonProperty("address")
+    @JsonPropertyDescription("Employee resource object")
+    @Valid
+    private Address address;
     @JsonIgnore
+    @Valid
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
@@ -110,6 +138,46 @@ public class Employee {
         this.lastName = lastName;
     }
 
+    /**
+     * Date of birth
+     * 
+     */
+    @JsonProperty("date_of_birth")
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    /**
+     * Date of birth
+     * 
+     */
+    @JsonProperty("date_of_birth")
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    /**
+     * Employee resource
+     * <p>
+     * Employee resource object
+     * 
+     */
+    @JsonProperty("address")
+    public Address getAddress() {
+        return address;
+    }
+
+    /**
+     * Employee resource
+     * <p>
+     * Employee resource object
+     * 
+     */
+    @JsonProperty("address")
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
     @JsonAnyGetter
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
@@ -135,6 +203,14 @@ public class Employee {
         sb.append("lastName");
         sb.append('=');
         sb.append(((this.lastName == null)?"<null>":this.lastName));
+        sb.append(',');
+        sb.append("dateOfBirth");
+        sb.append('=');
+        sb.append(((this.dateOfBirth == null)?"<null>":this.dateOfBirth));
+        sb.append(',');
+        sb.append("address");
+        sb.append('=');
+        sb.append(((this.address == null)?"<null>":this.address));
         sb.append(',');
         sb.append("additionalProperties");
         sb.append('=');

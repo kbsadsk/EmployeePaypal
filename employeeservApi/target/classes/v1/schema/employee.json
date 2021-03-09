@@ -18,6 +18,15 @@
       "type": "string",
       "minLength": 1,
       "maxLength": 255
+    },
+    "date_of_birth": {
+      "description": "Date of birth",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "address": {
+      "$ref": "address.json"
     }
   },
   "required": [

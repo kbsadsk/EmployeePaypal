@@ -1,2 +1,15 @@
+com\paypal\bfs\test\employeeserv\advice\RestResponseEntityExceptionHandler.class
+com\paypal\bfs\test\employeeserv\dao\EmployeeEntity.class
+com\paypal\bfs\test\employeeserv\service\EmployeeService.class
+com\paypal\bfs\test\employeeserv\dao\AddressEntity.class
+com\paypal\bfs\test\employeeserv\repository\EmployeeRepository.class
+com\paypal\bfs\test\employeeserv\advice\RestResponseEntityExceptionHandler$ServiceErrorResponse.class
+com\paypal\bfs\test\employeeserv\service\impl\EmployeeServiceImpl.class
 com\paypal\bfs\test\employeeserv\impl\EmployeeResourceImpl.class
+com\paypal\bfs\test\employeeserv\dao\EmployeeEntity$EmployeeEntityBuilder.class
 com\paypal\bfs\test\employeeserv\EmployeeservApplication.class
+com\paypal\bfs\test\employeeserv\exception\EmployeeInvalidRequest.class
+com\paypal\bfs\test\employeeserv\mapper\AddressEntityMapper.class
+com\paypal\bfs\test\employeeserv\dao\AddressEntity$AddressEntityBuilder.class
+com\paypal\bfs\test\employeeserv\mapper\EmployeeEntityMapper.class
+com\paypal\bfs\test\employeeserv\exception\EmployeeNotFoundException.class

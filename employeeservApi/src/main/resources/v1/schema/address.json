@@ -1,0 +1,54 @@
+{
+  "title": "Employee resource",
+  "description": "Employee resource object",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Address Id",
+      "type": "integer"
+    },
+    "line1": {
+      "description": "Address line 1",
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 255
+    },
+    "line2": {
+      "description": "Address line 2",
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255
+    },
+    "city": {
+      "description": "city",
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 255
+    },
+    "state": {
+      "description": "state",
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 255
+    },
+    "country": {
+      "description": "country",
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 255
+    },
+    "zip_code": {
+      "description": "zip code",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 10
+    }
+  },
+  "required": [
+    "line1",
+    "city",
+    "state",
+    "country",
+    "zip_code"
+  ]
+}
